@@ -1,0 +1,124 @@
+/* Mobile & table */
+@media (max-width: 1023px) {
+   
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+    .icon:hover {
+       transform: unset;
+    }
+
+    .icon:hover .fa-brands {
+        border-color: inherit;
+        filter:  drop-shadow(0px 0px 3px #ffffff);
+    }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .card {
+        width: 80%;
+        height: 80%;
+    }
+    .card-img {
+        width: 280px;
+        height: 280px;
+        transform: translateY(48px);
+	    border: 2px solid #0FF;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+        margin-top: 80px;
+    }
+    
+    p {
+        font-size: 2.6rem;
+        margin: 18px 0;
+    }
+
+    .icons {
+        margin: 18px 0;
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon .fa-brands, .icon .fa-solid {
+        border: 2px dashed #0FF;
+    }
+
+    button {
+        width: 60%;
+        margin-top: 32px;
+        border-radius: 10px;
+	    border: 2px solid #0FF;
+    }
+
+    button a {
+        font-size: 2.4rem;
+        padding: 24px 22px;
+    }
+
+    button > a > i {
+        font-size: xx-large;
+    }    
+    
+}
+/* Mobile */
+@media (max-width: 739px) {
+    .card {
+        width: 80%;
+        height: 80%;
+    }
+    .card-img {
+        width: 180px;
+        height: 180px;
+        transform: translateY(48px);
+    }
+
+    h2 {
+        color: #fff;
+        font-size: 1.8rem;
+        margin-top: 80px;
+    }
+    
+    p {
+        font-size: 1.6rem;
+        margin: 14px 0;
+    }
+
+    .icons {
+        margin: 14px 0;
+        font-size: 1.4rem;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon .fa-brands, .icon .fa-solid {
+        border: 2px dashed #0FF;
+    }
+
+    button {
+        width: 80%;
+        margin-top: 8px;
+        border-radius: 10px;
+	    border: 2px solid #0FF;
+    }
+
+    button a {
+        font-size: 1.6rem;
+        padding: 24px 22px;
+    }
+
+    button > a > i {
+        font-size: 1.6rem;
+    }  
+}

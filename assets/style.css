@@ -1,0 +1,232 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); */
+:root {
+    --pink-color: #f2726a;
+	/* --i-width: calc(var(--height)*0.25 - 23px); */
+	--width: 230px;
+    --height: 230px;
+    --i-width: calc(var(--height)*0.25 - 11px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(45deg, #000, #999);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+    width: 300px;
+    height: 400px;
+    border-radius: 4px;
+    text-align: center;
+	background-color: #000;
+	overflow: hidden;
+	margin: 0 30px;
+}
+
+.card-img {
+    width: 140px;
+	height: 140px;
+	overflow: hidden;
+	transition: 0.25s;
+	margin:0 auto;
+	transform: translateY(25px);
+	border-radius: 50%;
+	border: 1px solid #0FF;
+	cursor: pointer;
+    /* box-shadow: 0 0 10px rgb(59, 183, 255);
+    animation: box_avt 2s linear infinite; */
+}
+
+.card-img:hover {
+	width: 100%;
+	height: 100%;
+	border-radius: unset;
+	border: unset;
+	transform: unset;
+}
+
+  @keyframes box_avt{
+    0%{
+      box-shadow: 0 0 15px rgb(59, 59, 255);
+    }
+    20%{
+      box-shadow: 0 0 15px rgb(35, 229, 255);
+    }
+    40%{
+      box-shadow: 0 0 15px rgb(27, 255, 149);
+    }
+    60%{
+      box-shadow: 0 0 15px rgb(48, 255, 58);
+    }
+    80%{
+      box-shadow: 0 0 15px rgb(252, 255, 59);
+    }
+    100%{
+      box-shadow: 0 0 15px rgb(255, 59, 59);
+    }
+  }
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+/* 
+h2 {
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1.6rem;
+} */
+
+h2 {
+    display: flex;
+    position: relative;
+    margin-top: 40px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    background-image: linear-gradient(
+      135deg,
+      #0400ff 0%,
+      #00d9ff 20%,
+      #ff0000 40%,
+      #e5ff00 60%,
+      #2bff00 80%,
+      #0400ff 100%);
+      text-shadow:  0 0 40px #000;
+    background-size: 200% auto;
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+  }
+  @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+p {
+    color: var(--pink-color);
+    margin: 8px auto ;
+    font-size: 1.4rem;
+}
+	
+.icons {
+    min-width: 80%;
+    transition: 0.6s;
+    display: inline-flex;
+    justify-content: space-around;
+    transform-style: preserve-3d;
+    margin: 12px 0 12px 0;
+}
+
+.icon {
+	position: relative;
+    width: 48px;
+    height: 48px;
+    transform-style: preserve-3d;
+    transition: 0.7s;
+	/* margin-left: 4px;
+	margin-right: 4px; */
+}
+
+.icon .fa-brands,
+.icon .fa-solid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    color: #0FF;
+    border: 1px dashed #0FF;
+    display: grid;
+    place-content: center;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    cursor: pointer;
+    transform: rotateX(-40deg) rotateY(315deg);
+}
+.icon:hover .fa-brands {
+    border-color: inherit;
+    background-color: #FFF;
+}
+.icon:hover .fa-facebook-f {
+    color: #0000dd;
+}
+.icon:hover .fa-tiktok {
+    color: #101218;
+}
+.icon:hover .fa-youtube {
+    color: #F00;
+}
+.icon:hover .fa-envelope {
+    color: rgba(240, 24, 85, 0.95);
+}
+.front {
+    transform: translateZ(calc(var(--i-width)*0.5));
+}
+.back {
+    transform: translateZ(calc(var(--i-width)* -0.5));
+}
+.left {
+    transform: rotateY(-90deg) translateZ(calc(var(--i-width)* 0.5));
+}
+.right {
+    transform: rotateY(90deg) translateZ(calc(var(--i-width)* 0.5));
+}
+.bottom {
+    transform: rotateX(-90deg) translateZ(calc(var(--i-width)* 0.5));
+}
+.top {
+    transform: rotateX(90deg) translateZ(calc(var(--i-width)* 0.5));
+}
+
+button {
+    outline: none;
+	border: none;
+	color: #fff;
+	background-color: transparent;
+	border: 1px solid #0FF;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: 0.25s;
+    margin-top: 8px;
+    box-shadow: 0 0 15px rgb(59, 59, 255);
+    animation: box_avt 2s linear infinite;
+}
+
+button :hover {
+    border-radius: inherit;
+    color:red;
+    background-color: #fff;
+    filter:  drop-shadow(0px 0px 2px #fff);
+}
+
+button a {
+    text-decoration: none;
+	color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 22px;
+	display: block;
+}
+
+button > a > i {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
